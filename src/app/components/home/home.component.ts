@@ -22,7 +22,7 @@ export class HomeComponent implements AfterViewInit {
           }
         });
       }, {
-        threshold: 0.1
+        threshold: 0.3
       });
 
       sections.forEach(section => {
