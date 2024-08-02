@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { gsap } from 'gsap';
 
 @Component({
@@ -48,24 +48,26 @@ export class ProfileCardsComponent implements AfterViewInit {
       { name: 'Liam', position: 'Project Manager', image: 'assets/images/90.jpg' },
       { name: 'Emma', position: 'Business Analyst', image: 'assets/images/85.jpg' },
     ],
+
   ];
 
   speeds = [20, 20, 20, 20, 20];
 
-  constructor(private renderer: Renderer2, private el: ElementRef) {}
-
   ngAfterViewInit() {
-    const cardRows = this.el.nativeElement.querySelectorAll('.card-row');
+    if (typeof document !== 'undefined') {
+      const cardRows = document.querySelectorAll('.card-row');
 
-    cardRows.forEach((row: any, rowIndex: number) => {
-      const cardColumns = row.querySelectorAll('.profile-card');
-      cardColumns.forEach((column: any, colIndex: number) => {
-        const duration = this.speeds[colIndex % this.speeds.length];
-        gsap.fromTo(column,
-          { x: -1800, y: -1800 },
-          { x: 1000, y: 1000, duration: duration, repeat: -1, yoyo: false, ease: 'linear' }
-        );
+      cardRows.forEach((row, rowIndex) => {
+        const cardColumns = row.querySelectorAll('.profile-card');
+        cardColumns.forEach((column, colIndex) => {
+          const duration = this.speeds[colIndex % this.speeds.length];
+          gsap.fromTo(column,
+            { x: -1800, y: -1800 },
+            { x: 1000, y: 1000, duration: duration, repeat: -1, yoyo: false, ease: 'linear' }
+          );
+        });
       });
-    });
+    }
   }
+
 }

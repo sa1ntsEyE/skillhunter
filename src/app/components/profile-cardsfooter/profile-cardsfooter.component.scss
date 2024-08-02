@@ -19,7 +19,6 @@
         animation-iteration-count: infinite;
 
         &:nth-child(odd) {
-
           animation-name: move-left;
         }
 
@@ -34,7 +33,6 @@
           align-items: center;
           padding: 20px;
           width: 200px;
-
         }
       }
     }

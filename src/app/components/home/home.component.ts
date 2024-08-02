@@ -10,6 +10,7 @@ import { isPlatformBrowser } from '@angular/common';
 export class HomeComponent implements AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
+
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
       const sections = document.querySelectorAll('.fade-in-section');
@@ -28,6 +29,7 @@ export class HomeComponent implements AfterViewInit {
         observer.observe(section);
       });
     }
+
 
     if (isPlatformBrowser(this.platformId)) {
       const phceEls = document.querySelectorAll(".phce") || [];
