@@ -1,0 +1,11 @@
+<section class="wrapper--profileCardsFooter--section section  fade-in-section">
+  <div class="wrapper--profileCardsFooter">
+    <div class="profile-cards-container ">
+      <div class="card-row" *ngFor="let row of profileRows; let i = index">
+        <div class="profile-card--2" *ngFor="let profile of row">
+          <img [src]="profile.image" alt="#" class="profile-img" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

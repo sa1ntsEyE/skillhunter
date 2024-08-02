@@ -1,0 +1,10 @@
+<div class="profile-cards-container">
+  <div class="card-row" *ngFor="let row of profileRows; let rowIndex = index">
+    <div class="profile-card" *ngFor="let profile of row; let colIndex = index" [ngStyle]="{'animation-delay': colIndex * 0.1 + 's'}">
+      <img [src]="profile.image" alt="{{ profile.name }}" class="profile-img" />
+      <h3>{{ profile.name }}</h3>
+      <p>{{ profile.position }}</p>
+      <button>Invite</button>
+    </div>
+  </div>
+</div>

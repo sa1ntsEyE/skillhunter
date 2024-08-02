@@ -1,0 +1,60 @@
+.wrapper--profileCardsFooter--section {
+  .wrapper--profileCardsFooter {
+    min-height: 500px;
+    .profile-cards-container {
+      padding: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      height: 169px;
+      position: relative;
+
+      .card-row {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        animation-duration: 20s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        &:nth-child(odd) {
+
+          animation-name: move-left;
+        }
+
+        &:nth-child(even) {
+          top: 50%;
+          animation-name: move-right;
+        }
+
+        .profile-card--2 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+          width: 200px;
+
+        }
+      }
+    }
+  }
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

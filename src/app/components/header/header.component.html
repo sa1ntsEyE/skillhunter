@@ -1,0 +1,34 @@
+<div class="wrapper--header">
+  <header>
+    <div class="header--main container">
+      <div class="header--logo">
+        <a href="#" routerLink="">
+          <img src="assets/images/logo.png" alt="SkillHunter logo">
+
+        </a>
+        SkillHunter
+        <div class="header--nav" [class.active]="menuOpen">
+          <nav>
+            <ul>
+              <li><a href="#">CASES</a></li>
+              <li><a href="#">TOOLS</a></li>
+              <li><a href="#">ABOUT THE AGENCY</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header--action">
+        <p>Request a callback and speak with an expert</p>
+        <button>
+          Write to the manager
+        </button>
+      </div>
+      <div class="burger-menu" (click)="toggleMenu()" [class.open]="menuOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+</div>

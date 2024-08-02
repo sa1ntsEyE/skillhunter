@@ -1,0 +1,87 @@
+.profile-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 530px;
+  position: relative;
+}
+
+.card-row {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+}
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 60px;
+  width: 200px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transform: rotate(-45deg);
+  transform-origin: center;
+  position: relative;
+  backdrop-filter: blur(10px);
+  will-change: transform;
+  animation: moveCard linear infinite;
+}
+
+
+.profile-img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+button {
+  background-color: #ff8800;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+h3 {
+  color: rgb(255, 255, 255);
+  font-family: Raleway;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+p {
+  color: rgb(255, 255, 255);
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+@keyframes moveCard {
+  0% {
+    transform: translateY(-100%) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(100%) rotate(-45deg);
+  }
+}
+
+@media (max-width: 800px) {
+  .profile-cards-container{
+    margin-bottom: 80px;
+  }
+
+}
+
+
