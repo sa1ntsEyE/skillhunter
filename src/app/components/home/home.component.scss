@@ -537,12 +537,14 @@ app-header {
   overflow: hidden;
 
   .wrapper--parallax {
-    background-size: 100% 530px;
-    min-height: 530px;
+    background: url("/assets/images/Paralax.png") 0 0 no-repeat fixed;
+    background-size: 100% 100%;
     position: relative;
+    .parallax {
+      min-height: 530px;
+    }
   }
 }
-
 
 @keyframes pulse {
   0% {
