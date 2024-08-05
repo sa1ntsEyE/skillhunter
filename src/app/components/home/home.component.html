@@ -1,9 +1,19 @@
 <div class="wrapper--home">
   <app-header></app-header>
+  <div class="gallery-modal" *ngIf="showGallery" (click)="closeGallery($event)">
+    <div class="gallery-modal-content" (click)="$event.stopPropagation()">
+      <span class="close" (click)="closeGallery()">&times;</span>
+      <div class="gallery-navigation">
+        <button class="nav-button prev" (click)="prevImage()">&#10094;</button>
+        <div class="gallery-images">
+          <img [src]="currentImage" alt="Gallery Image" class="gallery-image">
+        </div>
+        <button class="nav-button next" (click)="nextImage()">&#10095;</button>
+      </div>
+    </div>
+  </div>
   <section class="wrapper--standards--section ">
-
     <div class="wrapper--standards section fade-in-section">
-
       <div class="standards--block--main container">
         <div class="standards--block--info">
           <div class="standards--block--info--title">
@@ -190,9 +200,10 @@
         <div class="cases--img--block--1">
           <div class="wrapper--circle--background"></div>
           <div class="cases--img">
-            <img src="assets/images/phone1.png" alt="">
-            <img src="assets/images/phone2.png" alt="">
-            <img src="assets/images/phone3.png" alt="">
+            <img src="assets/images/phone1.png" (click)="openGallery(['assets/images/phone1.png', 'assets/images/phone2.png', 'assets/images/phone3.png','assets/images/phone4.png', 'assets/images/phone5.png', 'assets/images/phone6.png'])" alt="">
+            <img src="assets/images/phone2.png" (click)="openGallery(['assets/images/phone2.png', 'assets/images/phone3.png', 'assets/images/phone4.png' , 'assets/images/phone5.png', 'assets/images/phone6.png', 'assets/images/phone1.png'])" alt="">
+            <img src="assets/images/phone3.png" (click)="openGallery(['assets/images/phone3.png', 'assets/images/phone4.png', 'assets/images/phone5.png', 'assets/images/phone6.png', 'assets/images/phone1.png', 'assets/images/phone2.png'])" alt="">
+
           </div>
           <div class="cases--text">
             <div class="cases--text--title">
@@ -220,9 +231,10 @@
             </div>
           </div>
           <div class="cases--img">
-            <img src="assets/images/phone4.png" alt="">
-            <img src="assets/images/phone5.png" alt="">
-            <img src="assets/images/phone6.png" alt="">
+            <img src="assets/images/phone4.png" (click)="openGallery(['assets/images/phone4.png', 'assets/images/phone5.png', 'assets/images/phone6.png' , 'assets/images/phone1.png', 'assets/images/phone2.png', 'assets/images/phone3.png'])" alt="">
+            <img src="assets/images/phone5.png" (click)="openGallery(['assets/images/phone5.png', 'assets/images/phone6.png', 'assets/images/phone1.png', 'assets/images/phone2.png', 'assets/images/phone3.png', 'assets/images/phone4.png'])" alt="">
+            <img src="assets/images/phone6.png" (click)="openGallery(['assets/images/phone6.png', 'assets/images/phone1.png', 'assets/images/phone2.png', 'assets/images/phone3.png', 'assets/images/phone4.png', 'assets/images/phone5.png'])" alt="">
+
           </div>
         </div>
       </div>
