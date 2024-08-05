@@ -1,4 +1,5 @@
 .wrapper--header {
+  z-index: 1000;
   .header--main {
     position: relative;
     display: flex;
@@ -175,6 +176,7 @@
       align-items: center;
       flex-direction: column;
       transition: opacity 0.3s ease;
+      z-index: 100;
     }
 
     .header--nav.active {
@@ -195,9 +197,10 @@
     }
 
     .burger-menu.open {
-      right: 45px;
+
       z-index: 1000;
       position: fixed;
+      .wrapper--standards {}
     }
   }
 }

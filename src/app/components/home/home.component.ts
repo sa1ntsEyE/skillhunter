@@ -1,40 +1,65 @@
 import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements AfterViewInit {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  private lastScrollTop = 0;
+  private currentIndex = 0;
 
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
+
+      const titles = document.querySelectorAll('.info--title');
+      const titleObserverOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+      };
+
+      const titleObserver = new IntersectionObserver(this.handleIntersection, titleObserverOptions);
+      titles.forEach(title => titleObserver.observe(title));
+
+
       const sections = document.querySelectorAll('.fade-in-section');
-      const observer = new IntersectionObserver(entries => {
+      const sectionObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
+            sectionObserver.unobserve(entry.target);
           }
         });
-      }, {
-        threshold: 0.3
-      });
+      }, { threshold: 0.5 });
+      sections.forEach(section => sectionObserver.observe(section));
 
-      sections.forEach(section => {
-        observer.observe(section);
-      });
-    }
-
-
-    if (isPlatformBrowser(this.platformId)) {
       const phceEls = document.querySelectorAll(".phce") || [];
       phceEls.forEach(phceEl => phceEl.addEventListener("pointermove", this.phceSetPositions));
     }
+  }
+
+  handleIntersection = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach(entry => {
+      const index = Array.from(document.querySelectorAll('.info--title')).indexOf(entry.target as Element);
+      if (entry.isIntersecting) {
+        this.activateTitle(index);
+      }
+    });
+  };
+
+  activateTitle(index: number) {
+    const titles = document.querySelectorAll('.info--title');
+    titles.forEach((title, i) => {
+      if (i === index) {
+        title.classList.add('active');
+      } else {
+        title.classList.remove('active');
+      }
+    });
   }
 
   phceSetPositions = ({ currentTarget: el, layerX: x, layerY: y }: any) => {
