@@ -209,6 +209,10 @@
       position: fixed;
       .wrapper--standards {}
     }
+
+    .header--logo {
+      justify-content: left !important;
+    }
   }
 }
 
