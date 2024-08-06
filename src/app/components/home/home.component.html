@@ -1,19 +1,21 @@
 <div class="wrapper--home">
   <app-header></app-header>
-  <div class="gallery-modal" *ngIf="showGallery" (click)="closeGallery($event)">
-    <div class="gallery-modal-content" (click)="$event.stopPropagation()">
-      <span class="close" (click)="closeGallery()">&times;</span>
-      <div class="gallery-navigation">
-        <button class="nav-button prev" (click)="prevImage()">&#10094;</button>
-        <div class="gallery-images">
-          <img [src]="currentImage" alt="Gallery Image" class="gallery-image">
+  <section>
+    <div class="gallery-modal" *ngIf="showGallery" (click)="closeGallery($event)">
+      <div class="gallery-modal-content" (click)="$event.stopPropagation()">
+        <span class="close" (click)="closeGallery()">&times;</span>
+        <div class="gallery-navigation">
+          <button class="nav-button prev" (click)="prevImage()">&#10094;</button>
+          <div class="gallery-images">
+            <img [src]="currentImage" alt="Gallery Image" class="gallery-image">
+          </div>
+          <button class="nav-button next" (click)="nextImage()">&#10095;</button>
         </div>
-        <button class="nav-button next" (click)="nextImage()">&#10095;</button>
       </div>
     </div>
-  </div>
-  <section class="wrapper--standards--section ">
-    <div class="wrapper--standards section fade-in-section">
+  </section>
+  <section class="wrapper--standards--section fade-in-section">
+    <div class="wrapper--standards">
       <div class="standards--block--main container">
         <div class="standards--block--info">
           <div class="standards--block--info--title">
@@ -37,7 +39,7 @@
       </div>
     </div>
   </section>
-  <section class="wrapper--system--section section fade-in-section">
+  <section class="wrapper--system--section fade-in-section">
     <div class="system--section container">
       <div class="system--info">
         <div class="system--title">
@@ -69,7 +71,7 @@
     </div>
   </section>
 
-  <section class="wrapper--strategy--section section fade-in-section">
+  <section class="wrapper--strategy--section fade-in-section">
     <div class="strategy--section container">
       <div class="strategy--info">
         <div class="strategy--info--leftSide">
@@ -90,7 +92,7 @@
       </div>
     </div>
   </section>
-  <section class="wrapper--tranding--section section  fade-in-section">
+  <section class="wrapper--tranding--section  fade-in-section">
     <div class="wrapper--tranding container">
       <div class="tranding--info">
         <div class="tranding--info--title">
@@ -162,12 +164,11 @@
   <section class="wrapper--parallax--section ">
     <div class="wrapper--parallax ">
       <div class="parallax">
-
       </div>
     </div>
   </section>
 
-  <section class="wrapper--info--text--section section fade-in-section">
+  <section class="wrapper--info--text--section fade-in-section">
     <div class="wrapper--circle--background"></div>
     <div class="wrapper--info--text container">
       <div class="info--text--main">
@@ -194,12 +195,12 @@
     </div>
   </section>
 
-  <section class="wrapper--cases--section section  fade-in-section">
+  <section class="wrapper--cases--section">
     <div class="wrapper--cases container">
       <div class="cases--img--block--main">
         <div class="cases--img--block--1">
           <div class="wrapper--circle--background"></div>
-          <div class="cases--img">
+          <div class="cases--img fade-in-section">
             <img src="assets/images/phone1.png" (click)="openGallery(['assets/images/phone1.png', 'assets/images/phone2.png', 'assets/images/phone3.png','assets/images/phone4.png', 'assets/images/phone5.png', 'assets/images/phone6.png'])" alt="">
             <img src="assets/images/phone2.png" (click)="openGallery(['assets/images/phone2.png', 'assets/images/phone3.png', 'assets/images/phone4.png' , 'assets/images/phone5.png', 'assets/images/phone6.png', 'assets/images/phone1.png'])" alt="">
             <img src="assets/images/phone3.png" (click)="openGallery(['assets/images/phone3.png', 'assets/images/phone4.png', 'assets/images/phone5.png', 'assets/images/phone6.png', 'assets/images/phone1.png', 'assets/images/phone2.png'])" alt="">
@@ -218,7 +219,7 @@
           </div>
         </div>
         <div class="cases--img--block--2">
-          <div class="wrapper--circle--background"></div>
+
           <div class="cases--text">
             <div class="cases--text--title">
               SMM
@@ -230,7 +231,8 @@
               Business positioning system in social networks.
             </div>
           </div>
-          <div class="cases--img">
+          <div class="wrapper--circle--background"></div>
+          <div class="cases--img section fade-in-section">
             <img src="assets/images/phone4.png" (click)="openGallery(['assets/images/phone4.png', 'assets/images/phone5.png', 'assets/images/phone6.png' , 'assets/images/phone1.png', 'assets/images/phone2.png', 'assets/images/phone3.png'])" alt="">
             <img src="assets/images/phone5.png" (click)="openGallery(['assets/images/phone5.png', 'assets/images/phone6.png', 'assets/images/phone1.png', 'assets/images/phone2.png', 'assets/images/phone3.png', 'assets/images/phone4.png'])" alt="">
             <img src="assets/images/phone6.png" (click)="openGallery(['assets/images/phone6.png', 'assets/images/phone1.png', 'assets/images/phone2.png', 'assets/images/phone3.png', 'assets/images/phone4.png', 'assets/images/phone5.png'])" alt="">
@@ -241,7 +243,7 @@
     </div>
   </section>
 
-  <section class="wrapper--selection--section section  fade-in-section">
+  <section class="wrapper--selection--section fade-in-section">
 
     <div class="wrapper--selection container">
       <div class="selection--info">
@@ -271,7 +273,7 @@
     </div>
   </section>
 
-  <section class="wrapper--selection--second--section section  fade-in-section">
+  <section class="wrapper--selection--second--section fade-in-section">
     <div class="wrapper--circle--background"></div>
     <div class="wrapper--selection--second container">
       <div class="selection--second--info">
@@ -349,7 +351,7 @@
     </div>
   </section>
 
-  <section class="wrapper--selection--section section  fade-in-section">
+  <section class="wrapper--selection--section fade-in-section">
     <div class="wrapper--selection container">
       <div class="selection--info">
         <div class="selection--info--leftSide">
@@ -375,7 +377,7 @@
     </div>
   </section>
 
-  <section class="wrapper--selection--third--section section  fade-in-section">
+  <section class="wrapper--selection--third--section fade-in-section">
     <div class="wrapper--selection--third container">
       <div class="wrapper--circle--background"></div>
       <div class="selection--third--info">
@@ -438,7 +440,7 @@
     </div>
   </section>
 
-  <section class="wrapper--timeTested--section section  fade-in-section">
+  <section class="wrapper--timeTested--section fade-in-section">
     <div class="wrapper--circle--background"></div>
     <div class="wrapper--timeTested container">
       <div class="timeTested--info">
