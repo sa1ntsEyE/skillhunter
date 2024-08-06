@@ -984,6 +984,89 @@ app-header {
     }
   }
 
+  @media (max-width: 375px) {
+    .wrapper--cases {
+      margin-bottom: 100px;
+    }
+    .wrapper--info--text {
+      min-height: 768px !important;
+    }
+
+    .cases--text {
+      margin: 0px !important;
+
+      .cases--text--title {
+        text-align: center !important;
+      }
+
+      .cases--text--subtitle {
+        text-align: center !important;
+      }
+
+      .cases--text--description {
+        text-align: center !important;
+      }
+    }
+    .cases--img--block--1 {
+      background: url("/assets/images/case3.png") no-repeat 50% 30% !important;
+      background-size: auto !important;
+      padding: 10px;
+
+      .wrapper--circle--background {
+        top: 200px;
+        left: 140px;
+      }
+
+      min-height: 752px !important;
+      flex-direction: column-reverse;
+      align-items: center;
+      margin-bottom: 100px;
+
+      .cases--img {
+        min-height: 100px;
+        position: relative;
+
+        img {
+          transition: transform 0.3s ease;
+          position: absolute;
+          width: 119px !important;
+          height: 238px !important;
+        }
+
+        img:nth-child(1) {
+
+          position: absolute;
+          top: -370px !important;
+          left: -150px !important;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        img:nth-child(2) {
+          position: absolute;
+          top: -450px !important;
+          left: -40px !important;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        img:nth-child(3) {
+          position: absolute;
+          top: -290px !important;
+          left: 30px !important;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+
   .cases--img--block--2 {
     background: url("/assets/images/case3.png") no-repeat 50% 30% !important;
     background-size: auto !important;
@@ -1004,14 +1087,14 @@ app-header {
       img {
         transition: transform 0.3s ease;
         position: absolute;
-        width: auto;
-        height: auto;
+        width: 119px !important;
+        height: 238px !important;
       }
 
       img:nth-child(1) {
         position: absolute;
         top: 160px !important;
-        left: -170px !important;
+        left: -150px !important;
         &:hover {
           transform: scale(1.1);
         }
@@ -1020,7 +1103,7 @@ app-header {
       img:nth-child(2) {
         position: absolute;
         top: 110px !important;
-        left: -60px !important;
+        left: -40px !important;
         &:hover {
           transform: scale(1.1);
         }
@@ -1028,8 +1111,8 @@ app-header {
 
       img:nth-child(3) {
         position: absolute;
-        top: 300px !important;
-        left: 10px !important;
+        top: 240px !important;
+        left: 30px !important;
         &:hover {
           transform: scale(1.1);
         }
@@ -1585,6 +1668,65 @@ app-header {
     flex-wrap: wrap;
     justify-content: center !important;
     gap: 20px;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .selection--third--info--img {
+    position: relative;
+    img {
+      transition: transform 0.3s ease;
+      position: absolute;
+      width: 260px;
+
+    }
+    min-height: 553px;
+    img:nth-child(1) {
+      display: none;
+      position: absolute;
+      top: 144px;
+      left: 0px !important;
+      z-index: 1;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    img:nth-child(2) {
+      width: 204.25px !important;
+      height: 380px !important;
+      position: absolute;
+      top: 60px !important;
+      left: -30px !important;
+      z-index: 1;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    img:nth-child(3) {
+      width: 204.25px !important;
+      height: 380px !important;
+      position: absolute;
+      top: 40px !important;
+      left: 175px !important;
+      z-index: 1;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    img:nth-child(4) {
+      display: none;
+      position: absolute;
+      top: 144px;
+      left: 890px;
+      z-index: 1;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 
