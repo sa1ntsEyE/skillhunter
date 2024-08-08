@@ -71,13 +71,4 @@ export class HomeComponent implements AfterViewInit {
       sections.forEach(section => observer.observe(section));
     }
   }
-
-  private handleIntersection(entries: IntersectionObserverEntry[], observer: IntersectionObserver) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }
 }
