@@ -8,7 +8,7 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class HomeComponent implements AfterViewInit {
   private lastScrollTop = 0;
-  private currentIndex = 0;
+  private currentIndex = -1;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object ) {}
 
@@ -58,6 +58,12 @@ export class HomeComponent implements AfterViewInit {
         threshold: 0.1
       };
 
+      const observerOptions2 = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.7
+      };
+
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -67,8 +73,41 @@ export class HomeComponent implements AfterViewInit {
         });
       }, observerOptions);
 
-      titles.forEach(title => observer.observe(title));
+      const observer2 = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const index = Array.from(titles).indexOf(entry.target as HTMLElement);
+
+          if (entry.isIntersecting) {
+            if (this.currentIndex !== index) {
+              this.highlightTitle(index);
+              this.currentIndex = index;
+            }
+          } else if (this.currentIndex === index) {
+            this.dimTitle(index);
+          }
+        });
+      }, observerOptions2);
+
+
+
       sections.forEach(section => observer.observe(section));
+      titles.forEach(title => observer2.observe(title));
     }
+  }
+
+  private highlightTitle(index: number): void {
+    const titles = document.querySelectorAll('.info--title');
+    titles.forEach((title, i) => {
+      if (i === index) {
+        title.classList.add('is-visible');
+      } else {
+        title.classList.remove('is-visible');
+      }
+    });
+  }
+
+  private dimTitle(index: number): void {
+    const titles = document.querySelectorAll('.info--title');
+    titles[index].classList.remove('is-visible');
   }
 }

@@ -737,7 +737,7 @@ app-header {
 
       .info--title {
         width: 100%;
-        color: #646464;
+        color: white;
         font-family: Raleway;
         font-size: 42px;
         font-weight: 800;
@@ -745,7 +745,12 @@ app-header {
         letter-spacing: 0%;
         text-align: left;
         text-transform: uppercase;
-        transition: color 0.3s ease-in-out;
+        opacity: 0.5;
+        transition: opacity 0.5s ease-in-out;
+
+        &.is-visible {
+          opacity: 1;
+        }
 
         &.active {
           color: #FFFFFF;
