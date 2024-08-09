@@ -15,8 +15,9 @@
       </div>
       <div class="footer--action">
         <p>Request a callback and speak with an expert</p>
-        <button>Write to the manager</button>
+        <button (click)="openModal()">Write to the manager</button>
       </div>
     </div>
   </footer>
+  <app-modalpopup *ngIf="isModalOpen" (closeModal)="closeModal()"></app-modalpopup>
 </div>

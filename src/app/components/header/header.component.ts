@@ -15,4 +15,14 @@ export class HeaderComponent {
   closeMenu() {
     this.menuOpen = false;
   }
+
+  isModalOpen = false;
+
+  openModal() {
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
 }

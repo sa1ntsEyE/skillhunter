@@ -20,7 +20,7 @@
       </div>
       <div class="header--action">
         <p>Request a callback and speak with an expert</p>
-        <button>
+        <button (click)="openModal()">
           Write to the manager
         </button>
       </div>
@@ -31,4 +31,5 @@
       </div>
     </div>
   </header>
+  <app-modalpopup *ngIf="isModalOpen" (closeModal)="closeModal()"></app-modalpopup>
 </div>
