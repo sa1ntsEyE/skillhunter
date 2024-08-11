@@ -1,5 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
-
+import { Component, Output, EventEmitter, Renderer2, ElementRef, AfterViewInit } from '@angular/core';
 
 interface FormEntry {
   name: string;
@@ -16,7 +15,7 @@ interface FormEntry {
   templateUrl: './modalpopup.component.html',
   styleUrls: ['./modalpopup.component.scss']
 })
-export class ModalpopupComponent {
+export class ModalpopupComponent implements AfterViewInit {
   @Output() closeModal = new EventEmitter<void>();
 
   formData = {
@@ -42,6 +41,17 @@ export class ModalpopupComponent {
 
   submittedData: FormEntry[] = [];
 
+  constructor(private renderer: Renderer2, private elRef: ElementRef) {}
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      const wrapper = this.elRef.nativeElement.querySelector('.wrapper--popup');
+      this.renderer.addClass(wrapper, 'fade-in');
+      const popupMain = this.elRef.nativeElement.querySelector('.popup--main');
+      this.renderer.addClass(popupMain, 'fade-in');
+    }, 0);
+  }
+
   isFormValid(): boolean {
     const allFieldsFilled = Object.values(this.formData).every(field => field.trim() !== '');
     const atLeastOneServiceSelected = this.services.some(service => service.selected);
@@ -52,13 +62,13 @@ export class ModalpopupComponent {
   onSubmit() {
     if (this.isFormValid()) {
       const selectedServices = this.services.filter(service => service.selected).map(service => service.name);
-      const newEntry: FormEntry = {
+      const formDataWithServices = {
         ...this.formData,
         services: selectedServices
       };
-      this.submittedData.push(newEntry);
+      this.submittedData.push(formDataWithServices);
+      console.log('Submitted data:', formDataWithServices);
       this.closeModal.emit();
-      console.log(this.submittedData);
     } else {
       console.log('Пожалуйста, заполните все поля и выберите хотя бы одну услугу.');
     }

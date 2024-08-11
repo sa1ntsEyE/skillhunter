@@ -1,48 +1,42 @@
 <div class="wrapper--popup" (click)="onFieldClick()">
   <div class="popup--main" (click)="$event.stopPropagation()">
-    <button class="popup--close" (click)="closeModal.emit()">
-      &times;
-    </button>
+    <button class="popup--close" (click)="closeModal.emit()">&times;</button>
     <div class="popup--main--info">
-      <div class="popup--main--info--title">
-        Заповніть короткий бриф
-      </div>
+      <div class="popup--main--info--title">Заповніть короткий бриф</div>
       <div class="popup--main--info--subtitle">
         Наші фахівці вивчать інформацію та зв'яжуться
-        <br>
+        <br />
         з вами в найближчий робочий день.
       </div>
     </div>
     <div class="popup--main--form">
-      <form (ngSubmit)="onSubmit()">
-        <div class="popup--main--form--input">
-          <input type="text" placeholder="Имя" [(ngModel)]="formData.name" name="name">
+      <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <div class="popup--main--form--input" [ngClass]="{'invalid': form.submitted && !formData.name}">
+          <input type="text" placeholder="Имя" [(ngModel)]="formData.name" name="name" required />
         </div>
-        <div class="popup--main--form--input">
-          <input type="text" placeholder="+380999999999" [(ngModel)]="formData.phone" name="phone">
+        <div class="popup--main--form--input" [ngClass]="{'invalid': form.submitted && !formData.phone}">
+          <input type="text" placeholder="+380999999999" [(ngModel)]="formData.phone" name="phone" required />
         </div>
-        <div class="popup--main--form--input">
-          <input type="text" placeholder="Почта" [(ngModel)]="formData.email" name="email">
+        <div class="popup--main--form--input" [ngClass]="{'invalid': form.submitted && !formData.email}">
+          <input type="text" placeholder="Почта" [(ngModel)]="formData.email" name="email" required />
         </div>
-        <div class="popup--main--form--input">
-          <input type="text" placeholder="Название компании" [(ngModel)]="formData.companyName" name="companyName">
+        <div class="popup--main--form--input" [ngClass]="{'invalid': form.submitted && !formData.companyName}">
+          <input type="text" placeholder="Название компании" [(ngModel)]="formData.companyName" name="companyName" required />
         </div>
-        <div class="popup--main--form--input">
-          <input type="text" placeholder="Пожалуйста, напишите ссылки на сайт и социальные сети." [(ngModel)]="formData.links" name="links">
+        <div class="popup--main--form--input" [ngClass]="{'invalid': form.submitted && !formData.links}">
+          <input type="text" placeholder="Пожалуйста, напишите ссылки на сайт и социальные сети." [(ngModel)]="formData.links" name="links" required />
         </div>
-        <div class="popup--main--form--input">
-          <input type="text" placeholder="Подробное описание задачи" [(ngModel)]="formData.taskDescription" name="taskDescription">
+        <div class="popup--main--form--input" [ngClass]="{'invalid': form.submitted && !formData.taskDescription}">
+          <input type="text" placeholder="Подробное описание задачи" [(ngModel)]="formData.taskDescription" name="taskDescription" required />
         </div>
         <div class="popup--main--form--input--checkbox">
-          <div class="popup--main--form--input--checkbox--title">
-            Послуги, які хотіли б замовити
-          </div>
+          <div class="popup--main--form--input--checkbox--title">Послуги, які хотіли б замовити</div>
           <div class="input--checkbox--main">
             <ul>
               <li class="checkboxes__item" *ngFor="let service of services; let i = index">
                 <label class="checkboxes__item--control">
-                  <input type="checkbox" [(ngModel)]="services[i].selected" name="service-{{i}}">
-                  {{service.name}}
+                  <input type="checkbox" [(ngModel)]="services[i].selected" name="service-{{ i }}" />
+                  {{ service.name }}
                 </label>
               </li>
             </ul>
