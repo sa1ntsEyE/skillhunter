@@ -24,7 +24,7 @@
     line-height: 140%;
     letter-spacing: 0%;
     text-align: left;
-    gap: 8px;
+    gap: 40px;
 
 
     .header--title {
@@ -37,7 +37,7 @@
 
   .header--nav {
     display: flex;
-    justify-content: center;;
+
     align-items: center;
     max-width: 100%;
     flex-grow: 1;
@@ -51,7 +51,7 @@
       font-size: 24px;
       font-weight: 500;
       text-align: left;
-      width: 75%;
+      width: 65%;
       padding-top: 5px;
     }
 

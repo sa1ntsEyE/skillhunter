@@ -50,7 +50,7 @@ app-header {
   background-color: #000000;
   background:
     url("/assets/images/bgmap.webp");
-  background-position: top center;
+  background-position: 50% -0.21%;
   background-repeat: no-repeat;
   background-size: 1440px;
 }
@@ -71,12 +71,11 @@ app-header {
 
 
     background:
-      url("/assets/images/dot1.png") no-repeat 20% 19%,
-      url("/assets/images/dot1.png") no-repeat 53% 75%,
-      url("/assets/images/dot1.png") no-repeat 63.5% 15%;
+      url("/assets/images/dot1.png") no-repeat 26% 4.19%,
+      url("/assets/images/dot1.png") no-repeat 52.8% 41.8%,
+      url("/assets/images/dot1.png") no-repeat 63.5% 4%;
     background-size: 100px 100px;
-    background-position:
-      26% 24%, 52.7% 73%, 63.5% 20%;
+
     animation: blinkDot1 2s infinite;
     opacity: 1;
   }
@@ -91,15 +90,13 @@ app-header {
 
 
     background:
-      url("/assets/images/dot2.png") no-repeat,
-      url("/assets/images/dot2.png") no-repeat,
-      url("/assets/images/dot2.png") no-repeat,
-      url("/assets/images/dot2.png") no-repeat,
-      url("/assets/images/dot2.png") no-repeat,
-      url("/assets/images/dot2.png") no-repeat;
+      url("/assets/images/dot2.png") no-repeat 45% -5%,
+      url("/assets/images/dot2.png") no-repeat 34% 15%,
+      url("/assets/images/dot2.png") no-repeat 38.5% 52%,
+      url("/assets/images/dot2.png") no-repeat  54% 10%,
+      url("/assets/images/dot2.png") no-repeat 75.6% 7%,
+      url("/assets/images/dot2.png") no-repeat  71.5% 44%;
     background-size: 100px 100px;
-    background-position:
-      45% 11%, 34% 39%, 38.5% 90%, 54% 32%, 75.6% 24%, 71% 78%;
     animation: blinkDot2 2s infinite;
     opacity: 1;
   }
