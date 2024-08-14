@@ -8,6 +8,12 @@ interface FormEntry {
   links: string;
   taskDescription: string;
   services: string[];
+  countryCode: string;
+}
+
+interface Country {
+  name: string;
+  dialCode: string;
 }
 
 @Component({
@@ -24,8 +30,15 @@ export class ModalpopupComponent implements AfterViewInit {
     email: '',
     companyName: '',
     links: '',
-    taskDescription: ''
+    taskDescription: '',
+    countryCode: '+380'
   };
+
+  countries: Country[] = [
+    { name: 'Украина', dialCode: '+380' },
+    { name: 'Польша', dialCode: '+48' },
+    { name: 'США', dialCode: '+1' },
+  ];
 
   services = [
     { name: 'Розробити HR-стратегію', selected: false },
@@ -72,6 +85,11 @@ export class ModalpopupComponent implements AfterViewInit {
     } else {
       console.log('Пожалуйста, заполните все поля и выберите хотя бы одну услугу.');
     }
+  }
+
+  onCountryChange(event: Event) {
+    const selectedDialCode = (event.target as HTMLSelectElement).value;
+    this.formData.phone = `${selectedDialCode}`;
   }
 
   onFieldClick() {

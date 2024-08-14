@@ -28,6 +28,7 @@
     "express": "^4.18.2",
     "gsap": "^3.12.5",
     "ngx-parallax": "^4.0.0",
+    "ngx-phone-number-input": "^1.0.0",
     "parallax-js": "^3.1.0",
     "photoswipe": "^5.4.4",
     "rxjs": "~7.8.0",

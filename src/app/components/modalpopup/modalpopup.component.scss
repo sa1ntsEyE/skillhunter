@@ -70,6 +70,15 @@
       padding: 40px 45px;
       .popup--main--form--input {
         margin-bottom: 25px;
+
+        select {
+          background: transparent;
+          color: #FFFFFF;
+          option {
+            background: transparent;
+            color: #000;
+          }
+        }
         input {
           color: #ffffff;
           background-color: transparent;

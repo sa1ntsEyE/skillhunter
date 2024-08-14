@@ -15,8 +15,14 @@
           <input type="text" placeholder="Имя" [(ngModel)]="formData.name" name="name" required />
         </div>
         <div class="popup--main--form--input" [ngClass]="{'invalid': form.submitted && !formData.phone}">
-          <input type="text" placeholder="+380999999999" [(ngModel)]="formData.phone" name="phone" required />
+          <select [(ngModel)]="formData.countryCode" name="countryCode" (change)="onCountryChange($event)">
+            <option *ngFor="let country of countries" [value]="country.dialCode">
+              {{ country.name }} ({{ country.dialCode }})
+            </option>
+          </select>
+          <input type="text" placeholder="Номер телефона" [(ngModel)]="formData.phone" name="phone" required />
         </div>
+
         <div class="popup--main--form--input" [ngClass]="{'invalid': form.submitted && !formData.email}">
           <input type="text" placeholder="Почта" [(ngModel)]="formData.email" name="email" required />
         </div>

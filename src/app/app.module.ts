@@ -8,9 +8,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileCardsComponent } from './components/profile-cards/profile-cards.component';
 import { ProfileCardsfooterComponent } from './components/profile-cardsfooter/profile-cardsfooter.component';
-
 import { MatDialogModule } from "@angular/material/dialog";
 import { ModalpopupComponent } from './components/modalpopup/modalpopup.component';
+
 
 @NgModule({
   declarations: [
