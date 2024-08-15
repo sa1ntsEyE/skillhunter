@@ -800,7 +800,7 @@ app-header {
         width: 100%;
         color: white;
         font-family: Raleway;
-        font-size: 42px;
+        font-size: 50px;
         font-weight: 800;
         line-height: 120%;
         letter-spacing: 0%;
@@ -855,7 +855,7 @@ app-header {
     .cases--img--block--main {
       .cases--img--block--1 {
         position: relative;
-        background: url("/assets/images/case1.png") no-repeat 68% 100%;
+        background: url("/assets/images/case1.png") no-repeat 46% 70% / 600px 398.73px;
         justify-content: space-between;
         min-height: 820px;
         display: flex;
@@ -871,11 +871,12 @@ app-header {
         }
 
         .cases--img {
+
           position: relative;
 
           img {
-            width: 236px;
-            height: 469px;
+            width: 200px;
+            height: 398.78px;
             transition: transform 0.3s ease;
             position: absolute;
 
@@ -883,8 +884,8 @@ app-header {
 
           img:nth-child(1) {
             position: absolute;
-            top: 200px;
-            left: 120px;
+            top: 310px;
+            left: 0px;
             &:hover {
               transform: scale(1.1);
             }
@@ -892,8 +893,8 @@ app-header {
 
           img:nth-child(2) {
             position: absolute;
-            top: 110px;
-            left: 360px;
+            top: 140px;
+            left: 220px;
             &:hover {
               transform: scale(1.1);
             }
@@ -902,7 +903,7 @@ app-header {
           img:nth-child(3) {
             position: absolute;
             top: 0px;
-            left: 600px;
+            left: 440px;
             &:hover {
               transform: scale(1.1);
             }
@@ -910,9 +911,12 @@ app-header {
         }
 
         .cases--text {
-          width: 172px;
-          height: 123px;
+          display: flex;
+          flex-direction: column;
+          width: 350px;
+          min-height: 150px;
           margin-top: 100px;
+          gap: 17px;
           .cases--text--title {
             color: rgb(255, 138, 0);
             font-family: Raleway;
@@ -926,7 +930,7 @@ app-header {
           .cases--text--subtitle {
             color: rgb(255, 255, 255);
             font-family: Raleway;
-            font-size: 42px;
+            font-size: 64px;
             font-weight: 800;
             line-height: 120%;
             letter-spacing: 0%;
@@ -934,9 +938,10 @@ app-header {
           }
 
           .cases--text--description {
+            width: 220px;
             color: rgb(217, 213, 213);
             font-family: Raleway;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 500;
             line-height: 120%;
             letter-spacing: 0%;
@@ -946,9 +951,8 @@ app-header {
       }
 
       .cases--img--block--2 {
-        background:  url("/assets/images/case2.png") no-repeat 50% 100%;
-        background-size: auto;
-        max-width: 800px;
+        background: url("/assets/images/case2.png") no-repeat 36% 85% / 605px 519px;
+
         min-height: 820px;
         display: flex;
         position: relative;
@@ -956,26 +960,26 @@ app-header {
           width: 100%;
           height: 1000px;
           position: absolute;
-          left: 300px;
+
           animation: blink-Circle 4s infinite linear;
-          background: url("/assets/images/backgray.png") no-repeat 50% 30%;
+          background: url("/assets/images/backgray.png") no-repeat 100% 70%;
           margin-top: -260px !important;
           margin-right: 0px !important;
         }
 
         .cases--img {
           img {
-            width: 236px;
-            height: 469px;
+            width: 200px;
+            height: 398.78px;
             transition: transform 0.3s ease;
             position: absolute;
 
           }
-          position: relative;
+
           img:nth-child(1) {
             position: absolute;
             top: 0px;
-            left: 250px;
+            left: 400px;
             &:hover {
               transform: scale(1.1);
             }
@@ -983,8 +987,8 @@ app-header {
 
           img:nth-child(2) {
             position: absolute;
-            top: 110px;
-            left: 500px;
+            top: 120px;
+            left: 620px;
             &:hover {
               transform: scale(1.1);
             }
@@ -992,8 +996,8 @@ app-header {
 
           img:nth-child(3) {
             position: absolute;
-            top: 200px;
-            left: 750px;
+            top: 220px;
+            left: 840px;
             &:hover {
               transform: scale(1.1);
             }
@@ -1001,9 +1005,12 @@ app-header {
         }
 
         .cases--text {
-          width: 172px;
-          height: 123px;
+          display: flex;
+          flex-direction: column;
+          width: 350px;
+          min-height: 150px;
           margin-top: 100px;
+          gap: 17px;
           .cases--text--title {
             color: rgb(255, 138, 0);
             font-family: Raleway;
@@ -1017,7 +1024,7 @@ app-header {
           .cases--text--subtitle {
             color: rgb(255, 255, 255);
             font-family: Raleway;
-            font-size: 42px;
+            font-size: 64px;
             font-weight: 800;
             line-height: 120%;
             letter-spacing: 0%;
@@ -1025,9 +1032,10 @@ app-header {
           }
 
           .cases--text--description {
+            width: 220px;
             color: rgb(217, 213, 213);
             font-family: Raleway;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 500;
             line-height: 120%;
             letter-spacing: 0%;
@@ -1039,88 +1047,7 @@ app-header {
   }
 }
 
-@media (max-width: 1025px) {
-
-  .cases--img--block--1 {
-    .cases--img {
-      min-height: 100px;
-      position: relative;
-
-      img {
-        width: 180px !important;
-        height: 380px !important;
-      }
-
-      img:nth-child(1) {
-        position: absolute;
-        top: 200px ;
-        left: 100px !important;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-
-      img:nth-child(2) {
-        position: absolute;
-        top: 110px;
-        left: 290px !important;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-
-      img:nth-child(3) {
-        position: absolute;
-        top: 0px;
-        left: 470px !important;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-    }
-  }
-
-  .cases--img--block--2 {
-    .cases--img {
-      min-height: 100px;
-      position: relative;
-
-      img {
-        width: 180px !important;
-        height: 380px !important;
-      }
-
-      img:nth-child(1) {
-        position: absolute;
-        top: 200px ;
-        left: 100px !important;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-
-      img:nth-child(2) {
-        position: absolute;
-        top: 110px;
-        left: 290px !important;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-
-      img:nth-child(3) {
-        position: absolute;
-        top: 0px;
-        left: 470px !important;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .wrapper--cases {
     margin-bottom: 100px;
   }
@@ -1129,6 +1056,7 @@ app-header {
   }
 
   .cases--text {
+    align-items: center;
     margin: 0px !important;
     .cases--text--title{
       text-align: center !important;
@@ -1138,17 +1066,19 @@ app-header {
     }
 
     .cases--text--description {
+
       text-align: center !important;
     }
   }
   .cases--img--block--1 {
-    background: url("/assets/images/case3.png") no-repeat 50% 30% !important;
+    background: url("/assets/images/case1.png") no-repeat 46% 30% / 600px 398.73px;
     background-size: auto !important;
     padding: 10px;
 
     .wrapper--circle--background {
       top: 200px;
       left: 140px;
+      background: url(/assets/images/backgray.png) no-repeat 50% 30% !important;
     }
 
     min-height: 752px !important;
@@ -1157,49 +1087,257 @@ app-header {
     margin-bottom: 100px;
 
     .cases--img {
-      min-height: 100px;
+      min-height: 831.23px;
       position: relative;
 
       img {
         transition: transform 0.3s ease;
         position: absolute;
-        width: 119px !important;
-        height: 238px !important;
+
       }
 
       img:nth-child(1) {
-
         position: absolute;
-        top: -370px !important;
-        left: -150px !important;
-
-        &:hover {
-          transform: scale(1.1);
-        }
+        top: 50px !important;
+        left: -360px !important;
       }
 
       img:nth-child(2) {
         position: absolute;
-        top: -450px !important;
-        left: -40px !important;
-
-        &:hover {
-          transform: scale(1.1);
-        }
+        top: 150px !important;
+        left: -150px !important;
       }
 
       img:nth-child(3) {
         position: absolute;
-        top: -290px !important;
-        left: 30px !important;
+        top: 300px !important;
+        left: 60px !important;
+      }
+    }
+  }
 
-        &:hover {
-          transform: scale(1.1);
+  .cases--img--block--2 {
+
+
+    .wrapper--circle--background {
+      top: 200px !important;
+
+      background: url("/assets/images/backgray.png") no-repeat 50% 30% !important;
+    }
+
+    min-height: 752px !important;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+
+    .cases--img {
+      min-height: 831.23px;
+      position: relative;
+
+      img {
+        transition: transform 0.3s ease;
+        position: absolute;
+
+      }
+
+      img:nth-child(1) {
+        position: absolute;
+        top: 50px !important;
+        left: -360px !important;
+      }
+
+      img:nth-child(2) {
+        position: absolute;
+        top: 150px !important;
+        left: -150px !important;
+      }
+
+      img:nth-child(3) {
+        position: absolute;
+        top: 300px !important;
+        left: 60px !important;
+      }
+    }
+  }
+
+
+
+@media (max-width: 1025px) {
+
+  .cases--img--block--1 {
+    .cases--img {
+      position: relative;
+      img {
+        width: 180px !important;
+        height: 380px !important;
+      }
+
+      img:nth-child(1) {
+        position: absolute;
+        top: 50px !important;
+        left: -300px !important;
+      }
+
+      img:nth-child(2) {
+        position: absolute;
+        top: 150px !important;
+        left: -100px !important;
+      }
+
+      img:nth-child(3) {
+        position: absolute;
+        top: 300px !important;
+        left: 100px !important;
+      }
+    }
+  }
+
+  .cases--img--block--2 {
+    .cases--img {
+      position: relative;
+      img {
+        width: 180px !important;
+        height: 380px !important;
+      }
+
+      img:nth-child(1) {
+        position: absolute;
+        top: 50px !important;
+        left: -300px !important;
+      }
+
+      img:nth-child(2) {
+        position: absolute;
+        top: 150px !important;
+        left: -100px !important;
+      }
+
+      img:nth-child(3) {
+        position: absolute;
+        top: 300px !important;
+        left: 100px !important;
+      }
+    }
+  }
+}
+
+
+
+
+  @media (max-width: 600px) {
+    .cases--img--block--1 {
+      .cases--img {
+        img:nth-child(1) {
+          width: 160px !important;
+          height: 320px !important;
+          position: absolute;
+          top: 160px !important;
+          left: -200px !important;
+        }
+
+        img:nth-child(2) {
+          width: 160px !important;
+          height: 320px !important;
+          position: absolute;
+          top: 100px !important;
+          left: -85px !important;
+        }
+
+        img:nth-child(3) {
+          width: 160px !important;
+          height: 320px !important;
+          position: absolute;
+          top: 280px !important;
+          left: -20px !important;
+        }
+      }
+    }
+
+    .cases--img--block--2 {
+      .cases--img {
+        img:nth-child(1) {
+          width: 160px !important;
+          height: 320px !important;
+          position: absolute;
+          top: 160px !important;
+          left: -200px !important;
+        }
+
+        img:nth-child(2) {
+          width: 160px !important;
+          height: 320px !important;
+          position: absolute;
+          top: 100px !important;
+          left: -85px !important;
+        }
+
+        img:nth-child(3) {
+          width: 160px !important;
+          height: 320px !important;
+          position: absolute;
+          top: 280px !important;
+          left: -20px !important;
         }
       }
     }
   }
 
+  @media (max-width: 425px) {
+    .cases--img--block--1 {
+      .cases--img {
+        img:nth-child(1) {
+          width: 160px !important;
+          height: 320px !important;
+          position: absolute;
+          top: 160px !important;
+          left: -170px !important;
+        }
+
+        img:nth-child(2) {
+          width: 160px !important;
+          height: 320px !important;
+          position: absolute;
+          top: 100px !important;
+          left: -55px !important;
+        }
+
+        img:nth-child(3) {
+          width: 160px !important;
+          height: 320px !important;
+          position: absolute;
+          top: 280px !important;
+          left: 10px !important;
+        }
+      }
+    }
+    .cases--img--block--2 {
+      .cases--img {
+        img:nth-child(1) {
+          width: 160px !important;
+          height: 320px !important;
+          position: absolute;
+          top: 160px !important;
+          left: -170px !important;
+        }
+
+        img:nth-child(2) {
+          width: 160px !important;
+          height: 320px !important;
+          position: absolute;
+          top: 100px !important;
+          left: -55px !important;
+        }
+
+        img:nth-child(3) {
+          width: 160px !important;
+          height: 320px !important;
+          position: absolute;
+          top: 280px !important;
+          left: 10px !important;
+        }
+      }
+    }
+  }
 
   @media (max-width: 375px) {
     .wrapper--cases {
@@ -1240,98 +1378,68 @@ app-header {
       margin-bottom: 100px;
 
       .cases--img {
-        min-height: 100px;
-        position: relative;
-
-        img {
-          transition: transform 0.3s ease;
-          position: absolute;
-          width: 119px !important;
-          height: 238px !important;
-        }
-
         img:nth-child(1) {
-
+          width: 160px !important;
+          height: 320px !important;
           position: absolute;
-          top: -370px !important;
-          left: -150px !important;
-
-          &:hover {
-            transform: scale(1.1);
-          }
+          top: 160px !important;
+          left: -170px !important;
         }
 
         img:nth-child(2) {
+          width: 160px !important;
+          height: 320px !important;
           position: absolute;
-          top: -450px !important;
-          left: -40px !important;
-
-          &:hover {
-            transform: scale(1.1);
-          }
+          top: 100px !important;
+          left: -55px !important;
         }
 
         img:nth-child(3) {
+          width: 160px !important;
+          height: 320px !important;
           position: absolute;
-          top: -290px !important;
-          left: 30px !important;
-
-          &:hover {
-            transform: scale(1.1);
-          }
+          top: 280px !important;
+          left: 10px !important;
         }
       }
     }
-  }
 
-  .cases--img--block--2 {
-    background: url("/assets/images/case3.png") no-repeat 50% 30% !important;
-    background-size: auto !important;
-    min-height: 752px !important;
-    flex-direction: column;
-    align-items: center;
+    .cases--img--block--2 {
+      background: url("/assets/images/case3.png") no-repeat 50% 30% !important;
+      background-size: auto !important;
+      min-height: 752px !important;
+      flex-direction: column;
+      align-items: center;
 
-    padding: 10px;
-    .wrapper--circle--background {
-      top: 150px;
-      left: 0px !important;
+      padding: 10px;
+      .wrapper--circle--background {
+        top: 150px;
+        left: 0px !important;
 
-    }
-    .cases--img {
-      min-height: 100px;
-      position: relative;
-
-      img {
-        transition: transform 0.3s ease;
-        position: absolute;
-        width: 119px !important;
-        height: 238px !important;
       }
-
-      img:nth-child(1) {
-        position: absolute;
-        top: 160px !important;
-        left: -150px !important;
-        &:hover {
-          transform: scale(1.1);
+      .cases--img {
+        img:nth-child(1) {
+          width: 160px !important;
+          height: 320px !important;
+          position: absolute;
+          top: 160px !important;
+          left: -170px !important;
         }
-      }
 
-      img:nth-child(2) {
-        position: absolute;
-        top: 110px !important;
-        left: -40px !important;
-        &:hover {
-          transform: scale(1.1);
+        img:nth-child(2) {
+          width: 160px !important;
+          height: 320px !important;
+          position: absolute;
+          top: 100px !important;
+          left: -55px !important;
         }
-      }
 
-      img:nth-child(3) {
-        position: absolute;
-        top: 240px !important;
-        left: 30px !important;
-        &:hover {
-          transform: scale(1.1);
+        img:nth-child(3) {
+          width: 160px !important;
+          height: 320px !important;
+          position: absolute;
+          top: 280px !important;
+          left: 10px !important;
         }
       }
     }
@@ -1362,6 +1470,10 @@ app-header {
       min-height: 219px;
       padding: 10px;
       .selection--info--leftSide {
+        flex-direction: column;
+        min-height: 135px !important;
+        gap: 20px;
+        display: flex;
         .selection--info--leftSide--title {
           color: rgb(255, 138, 0);
           font-family: Raleway;
@@ -1390,18 +1502,24 @@ app-header {
           min-height: 16px;
           color: rgb(217, 213, 213);
           font-family: Raleway;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 500;
           line-height: 120%;
           letter-spacing: 0%;
           text-align: left;
+
+          span {
+            color: #ff8a00;
+          }
         }
       }
 
       .selection--info--rightSide {
+        width: 395px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        gap: 20px;
 
         .selection--info--rightSide--title {
           color: rgb(255, 138, 0);
@@ -1415,13 +1533,21 @@ app-header {
 
         .selection--info--rightSide--description {
           p {
-            color: rgb(217, 213, 213);
+            margin: 5px 0;
+            padding: 0;
+            color: #d9d5d5;
             font-family: Raleway;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 300;
             line-height: 120%;
             letter-spacing: 0%;
             text-align: left;
+          }
+
+          span {
+            font-size: 20px;
+            color: #ff8a00;
+            font-weight: 800;
           }
         }
       }
@@ -1561,8 +1687,8 @@ app-header {
         min-height: 553px;
         img:nth-child(1) {
           position: absolute;
-          top: -50px;
-          left: 100px;
+          top: 40px;
+          left: 50px;
           z-index: 1;
           &:hover {
             transform: scale(1.1);
@@ -1571,8 +1697,8 @@ app-header {
 
         img:nth-child(2) {
           position: absolute;
-          top: -60px;
-          left: 450px;
+          top: 20px;
+          left: 380px;
           z-index: 1;
           &:hover {
             transform: scale(1.1);
@@ -1581,8 +1707,9 @@ app-header {
 
         img:nth-child(3) {
           position: absolute;
-          top: 100px;
-          left: 750px;
+
+          top: 200px;
+          left: 640px;
           z-index: 1;
           &:hover {
             transform: scale(1.1);
@@ -1798,6 +1925,7 @@ app-header {
       min-height: 762px;
       margin-bottom: 200px;
       .selection--third--info--card--main {
+        width: 100%;
         display: flex;
         justify-content: space-evenly;
         z-index: 1000;
@@ -1864,19 +1992,23 @@ app-header {
       }
 
       .selection--third--info--img {
+        width: 1250px;
+        margin: 0 auto;
         position: relative;
+        min-height: 753px;
         img {
           transition: transform 0.3s ease;
           position: absolute;
           width: 260px;
 
         }
-        min-height: 553px;
-        img:nth-child(1) {
 
+        img:nth-child(1) {
+          width: 280px;
+          height: 420px;
           position: absolute;
-          top: 144px;
-          left: 80px;
+          top: 320px;
+          left: 0px;
           z-index: 1;
           &:hover {
             transform: scale(1.1);
@@ -1884,9 +2016,11 @@ app-header {
         }
 
         img:nth-child(2) {
+          width: 283px;
+          height: 525px;
           position: absolute;
-          top: 20px;
-          left: 350px;
+          top: 160px;
+          left: 290px;
           z-index: 1;
           &:hover {
             transform: scale(1.1);
@@ -1894,9 +2028,11 @@ app-header {
         }
 
         img:nth-child(3) {
+          width: 337px;
+          height: 648px;
           position: absolute;
-          top: 0px;
-          left: 620px;
+          top: 50px;
+          left: 580px;
           z-index: 1;
           &:hover {
             transform: scale(1.1);
@@ -1904,9 +2040,11 @@ app-header {
         }
 
         img:nth-child(4) {
+          width: 323px;
+          height: 483px;
           position: absolute;
-          top: 144px;
-          left: 890px;
+          top: 260px;
+          left: 930px;
           z-index: 1;
           &:hover {
             transform: scale(1.1);
@@ -1973,6 +2111,7 @@ app-header {
 
 @media (max-width: 768px) {
   .selection--third--info--card--main {
+
     flex-wrap: wrap;
     justify-content: center !important;
     gap: 20px;
@@ -2155,6 +2294,7 @@ app-header {
         }
 
         .timeTested--info--text--title:nth-child(3) {
+          display: none;
           position: absolute;
           top: 350px;
           left: 910px;
@@ -2237,8 +2377,8 @@ app-header {
 
         img:nth-child(5) {
           position: absolute;
-          top: 171px;
-          left: 658px;
+          top: 71px;
+          left: 458px;
           &:hover {
             transform: scale(1.1);
           }

@@ -12,8 +12,7 @@
   .footer--logo {
     min-height: 49px;
     display: flex;
-    flex-direction: column;
-
+    align-items: center;
     color: rgb(255, 255, 255);
     font-family: Raleway;
     font-size: 22px;
@@ -21,7 +20,7 @@
     line-height: 140%;
     letter-spacing: 0%;
     text-align: left;
-    gap: 8px;
+    gap: 80px;
 
     .footer--logo--main {
       display: flex;

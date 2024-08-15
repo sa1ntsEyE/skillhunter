@@ -1,7 +1,10 @@
 .wrapper--profileCardsFooter--section {
+  position: relative;
+
   .wrapper--profileCardsFooter {
     min-height: 500px;
     .profile-cards-container {
+      position: relative;
       padding: 200px;
       display: flex;
       flex-direction: column;
@@ -9,6 +12,8 @@
       overflow: hidden;
       height: 169px;
       position: relative;
+
+
 
       .card-row {
         display: flex;
